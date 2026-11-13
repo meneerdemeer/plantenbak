@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bestellen – Machines op Maat</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#f3efe8" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231c1a17'/%3E%3Cpath d='M6 12h20v12H6z' fill='%23b4552d'/%3E%3Cpath d='M6 12h20v3H6z' fill='%23d27a4a'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,560&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script type="module" crossorigin src="./assets/afrekenen-CrEaOLer.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/mand-CxrLFCAJ.js">
+  <link rel="modulepreload" crossorigin href="./assets/url-CrUWaDrc.js">
+  <link rel="stylesheet" crossorigin href="./assets/stijl-64VP4UOP.css">
+</head>
+<body>
+  <header class="kop">
+    <a class="merk" href="./"><span class="merk-blok" aria-hidden="true"></span><span data-merk>Machines op Maat</span></a>
+    <nav aria-label="Pagina"><a class="altijd" href="./">← Verder samenstellen</a></nav>
+  </header>
+
+  <main class="kassa">
+    <section class="paneel" aria-label="Winkelmand">
+      <p class="label">Winkelmand</p>
+      <h1 class="kassakop">Je bestelling</h1>
+      <div id="regels" class="mandregels"></div>
+      <p id="leeg" class="leeg" hidden>Je winkelmand is leeg. <a href="./">Bekijk de producten</a>.</p>
+      <a class="tekstknop" href="./">+ Nog iets toevoegen</a>
+      <div class="totaal"><span>Totaal incl. btw</span><strong id="totaal"></strong></div>
+      <p class="klein-tekst" id="btwregel"></p>
+    </section>
+
+    <form id="kassaform" class="paneel" novalidate>
+      <h2>Je gegevens</h2>
+      <div class="veldrij">
+        <label>Naam<input name="naam" autocomplete="name" required /></label>
+        <label>E-mailadres<input name="email" type="email" autocomplete="email" required /></label>
+      </div>
+      <div class="veldrij">
+        <label>Telefoon<input name="telefoon" type="tel" autocomplete="tel" /></label>
+        <label>Straat en huisnummer<input name="straat" autocomplete="street-address" required /></label>
+      </div>
+      <div class="veldrij">
+        <label>Postcode<input name="postcode" autocomplete="postal-code" required /></label>
+        <label>Plaats<input name="plaats" autocomplete="address-level2" required /></label>
+      </div>
+      <fieldset class="keuze">
+        <legend>Levering</legend>
+        <label class="rij"><input type="radio" name="levering" value="Afhalen" checked /> <span id="afhaaltekst">Ik haal het bouwpakket zelf af (gratis)</span></label>
+        <label class="rij"><input type="radio" name="levering" value="Bezorgen in overleg" /> <span>Bezorgen op bovenstaand adres; de kosten hoor ik vooraf</span></label>
+      </fieldset>
+      <label>Opmerking<textarea name="opmerking" rows="3"></textarea></label>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="honing" aria-hidden="true" />
+
+      <div class="levering">
+        <strong>Zo gaat het verder</strong>
+        <p>Je ontvangt per e-mail een bevestiging met een iDEAL-betaalverzoek. Na betaling gaat je bestelling in productie<span id="levertijdtekst"></span>.</p>
+      </div>
+      <label class="rij akkoord"><input type="checkbox" name="akkoord" required />
+        <span>Ik ga akkoord met de <a href="./info.html#voorwaarden" target="_blank">algemene voorwaarden</a>. Mijn bestelling wordt op maat gemaakt; na betaling kan ik de bestelling daarom niet meer herroepen.</span></label>
+
+      <div id="kassamelding" class="meldingen" aria-live="polite"></div>
+      <button type="submit" class="knop groot" id="verstuur">Bestelling plaatsen</button>
+      <p class="klein-tekst">Je betaalt nu nog niets. Je gegevens gebruiken we alleen voor deze bestelling (<a href="./info.html#privacy" target="_blank">privacy</a>).</p>
+    </form>
+  </main>
+
+</body>
+</html>
