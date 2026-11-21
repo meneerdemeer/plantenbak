@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /afrekenen.html
+Disallow: /bedankt.html
+Sitemap: https://cortenopmaat.nl/sitemap.xml
